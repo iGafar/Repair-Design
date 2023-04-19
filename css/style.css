@@ -1,3 +1,70 @@
 body{
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .footer {
+    background-color: #131313;
+}
+
+.container {
+    max-width: 1283px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header__inner, .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.logo{
+    color: #E3B873;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 47px;
+}
+.menu__list-item:hover {
+    color: #E3B873;
+}
+
+.calls {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+.calls__number {
+    color: #E3B873;
+    text-decoration: underline;
+}
+.calls__button {
+    width: 161px;
+    height: 37px;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    font-style: italic;
+}
+.main {
+    flex-grow: 1;
+}
+
+.footer__inner {
+    padding: 60px 0;
 }
