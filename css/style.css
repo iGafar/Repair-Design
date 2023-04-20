@@ -243,6 +243,32 @@ body{
     margin-left: 10px;
 }
 
+.control {
+    margin-top: -340px;
+}
+
+.control__title {
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+.control__video {
+    
+}
+
+.control__subtitle {
+    font-size: 18px;
+    line-height: 37px;
+    color: #363636;
+}
+
+.control__form {
+    
+}
+.control__form-name {
+}
+
 .footer__inner {
     padding: 60px 0;
 }
