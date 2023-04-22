@@ -10,3 +10,16 @@ controlTick.addEventListener('click', ()=> {
         controlClick.classList.remove('control__form-click-del')
     }
 })
+
+let typesClick = document.querySelector('.types__form-click');
+let typesTick = document.querySelector('.types__form-tick');
+
+typesTick.addEventListener('click', ()=> {
+    if(typesClick.classList.contains('types__form-click-add')) {
+        typesClick.classList.add('types__form-click-del')
+        typesClick.classList.remove('types__form-click-add')
+    } else {
+        typesClick.classList.add('types__form-click-add')
+        typesClick.classList.remove('types__form-click-del')
+    }
+})

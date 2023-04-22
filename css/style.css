@@ -322,7 +322,7 @@ body{
     opacity: .9;
 }
 
-.control__form-tick{
+.control__form-tick, .types__form-tick{
     color: #181818;
     display: flex;
     align-items: center;
@@ -330,7 +330,7 @@ body{
     position: relative;
 }
 
-.control__form-tick::before{
+.control__form-tick::before, .types__form-tick::before{
     content: '';
     width: 18px;
     height: 18px;
@@ -340,11 +340,11 @@ body{
     top: -3px;
 }
 
-.control__form-tick:hover::before {
+.control__form-tick:hover::before, .types__form-tick:hover::before {
     opacity: .9;
 }
 
-.control__form-click {
+.control__form-click, .types__form-click {
     width: 20px;
     height: 20px;
     position: absolute;
@@ -352,15 +352,15 @@ body{
     left: 4px;
 }
 
-.control__form-click-add {
+.control__form-click-add, .types__form-click-add {
     background: url(../img/vector/control__check.svg) no-repeat;
 }
 
-.control__form-click-del{
+.control__form-click-del, .types__form-click-del{
     display: none;
 }
 
-.control__form-checkbox {
+.control__form-checkbox, .types__form-checkbox {
     opacity: 0;
 }
 
@@ -424,10 +424,11 @@ body{
     color: #959595;
     background-color: #FFFFFF;
     margin: -2px 0 23px;
-    list-style: armenian;
-    padding-left: 34px;
+    padding-left: 50px;
 }
-.types__top-item {
+
+.types__top-item{
+    list-style: disc;
 }
 
 .types__block-bottom {
@@ -440,6 +441,156 @@ body{
     text-transform: uppercase;
     text-align: center;
     padding: 17px 0;
+    cursor: pointer;
+}
+
+.types__block-bottom:hover{
+    opacity: .9;
+}
+
+.types__bottom {
+    position: relative;
+}
+
+.types__background{
+    position: absolute;
+    z-index: -1;
+    top: -115px;
+    left: -410px;
+}
+
+.types__bottom-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.types__bottom-list {
+    line-height: 19px;
+    color: #363636;
+    display: flex;
+    flex-direction: column;
+    gap: 102px;
+    max-width: 396px;
+    margin-left: 120px;
+}
+
+.types__bottom-item {
+    min-height: 42px;
+    padding-left: 86px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.types__bottom-item::before{
+    position: absolute;
+    left: 0;
+    top: -17px;
+}
+
+.types__bottom-item:first-child::before{
+    content: url(../img/vector/01.svg);
+}
+
+.types__bottom-item:nth-child(2)::before{
+    content: url(../img/vector/02.svg);
+}
+
+.types__bottom-item:nth-child(3)::before{
+    content: url(../img/vector/03.svg);
+}
+
+.types__bottom-item:nth-child(4)::before{
+    content: url(../img/vector/04.svg);
+}
+
+.types__form {
+    background: #131313;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    padding: 28px 49px;
+    max-width: 506px;
+}
+
+.types__form-title {
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 270px;
+    margin: 0 auto 39px;
+    text-align: center;
+}
+
+.types__form-block{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 17px;
+}
+
+.types__form-label{
+    display: flex;
+    flex-direction: column;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: start;
+    gap: 7px;
+    width: 408px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.types__form-label>input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    background-color: rgba(0,0,0,0);
+    outline: 0;
+    line-height: 23px;
+    color: #fff;
+}
+
+
+.types__form-tick {
+    color: #fff;
+    margin-bottom: 39px;
+}
+
+.types__form-btn{
+    width: 213px;
+    padding: 19px 0;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+    line-height: 21px;
+    text-transform: uppercase;
+    float: right;
+}
+
+.types__form-btn:hover{
+    opacity: .9;
+}
+
+.types__bottom-end {
+    font-size: 18px;
+    line-height: 26px;
+    color: #E3B873;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.types__bottom-img{
+    display: inline-block;
+    background: url(../img/vector/pig.svg) no-repeat;
+    background-position: center;
+    background-color: #E3B873;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.types__bottom-text{
+    max-width: 215px;
+    margin-right: 160px;
 }
 
 .footer__inner {
