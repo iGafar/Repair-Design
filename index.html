@@ -116,9 +116,14 @@
 
             <section class="control">
                 <div class="container">
-
+                    
                     <h3 class="control__title">online control</h3>
+                    <div class="control__logo"></div>
+
                     <img src="./img/control__img.jpg" alt="Video" class="control__video">
+                    
+
+                    <hr class="control__line">
 
                     <p class="control__subtitle">
                         At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time, you can go to our website and monitor the progress of work in your apartment. You can watch the live broadcast from one of our facilities!
@@ -126,26 +131,92 @@
                     </p>
                     <form action="#" class="control__form">
 
-                        <label for="#" class="control__form-name">
-                            Name
-                            <input type="text" placeholder="What is your name:">
-                        </label>
+                        <div class="control__form-block">
+                            <label for="#" class="control__form-label">
+                                Name
+                                <input type="text" placeholder="What is your name:">
+                            </label>
+    
+                            <label for="#" class="control__form-label">
+                                Phone
+                                <input type="tel" placeholder="Your phone number:">
+                            </label>
+    
+                            <button class="control__form-button" type="submit">Submit</button>
+                        </div>
 
-                        <label for="#" class="control__form-name">
-                            Phone
-                            <input type="number" placeholder="Your phone number:">
-                        </label>
-
-                        <button type="submit">Submit</button>
-
-                        <label for="#" class="control__form-name">
-                            <input type="radio" name="Agree" id="#">
+                        <label for="#" class="control__form-tick">
+                            <div class="control__form-click"></div>
+                            <input class="control__form-checkbox" type="checkbox" name="Agree" id="#">
                             I agree to the processing of personal data
                         </label>
 
                     </form>
+                
+                </div>
 
-                </img>
+            </section>
+
+            <section class="types">
+                <div class="container">
+
+                    <h3 class="types__title">TYPES OF REPAIR</h3>
+                    <div class="types__logo"></div>
+
+                    <div class="types__top">
+
+                        <div class="types__top-block">
+                            <p class="types__top-title">Redecorating</p>
+
+                            <ul class="types__top-list">
+                                <li class="types__top-item">Dismantling of old coatings</li>
+                                <li class="types__top-item">Wallpapering</li>
+                                <li class="types__top-item">Painting walls and ceiling</li>
+                                <li class="types__top-item">Laying flooring</li>
+                                <li class="types__top-item">Replacing plumbing</li>
+                                <li class="types__top-item">Replacing sockets and swiches</li>
+                                <li class="types__top-item">Replacing doors</li>
+                            </ul>
+
+                            <div class="types__block-bottom">from 900 rub / m2</div>
+                        </div>
+
+                        <div class="types__top-block">
+                            <p class="types__top-title">Overhaul</p>
+
+                            <ul class="types__top-list">
+                                <li class="types__top-item">Dismantling of old coatings</li>
+                                <li class="types__top-item">Wallpapering</li>
+                                <li class="types__top-item">Painting walls and ceiling</li>
+                                <li class="types__top-item">Laying flooring</li>
+                                <li class="types__top-item">Replacing plumbing</li>
+                                <li class="types__top-item">Replacing sockets and swiches</li>
+                                <li class="types__top-item">Replacing doors</li>
+                            </ul>
+
+                            <div class="types__block-bottom">from 900 rub / m2</div>
+                        </div>
+
+                        <div class="types__top-block">
+                            <p class="types__top-title">Designer Repair</p>
+
+                            <ul class="types__top-list">
+                                <li class="types__top-item">Dismantling of old coatings</li>
+                                <li class="types__top-item">Wallpapering</li>
+                                <li class="types__top-item">Painting walls and ceiling</li>
+                                <li class="types__top-item">Laying flooring</li>
+                                <li class="types__top-item">Replacing plumbing</li>
+                                <li class="types__top-item">Replacing sockets and swiches</li>
+                                <li class="types__top-item">Replacing doors</li>
+                            </ul>
+
+                            <div class="types__block-bottom">from 900 rub / m2</div>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
             </section>
             
         </main>
@@ -174,5 +245,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
