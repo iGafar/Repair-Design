@@ -23,3 +23,16 @@ typesTick.addEventListener('click', ()=> {
         typesClick.classList.remove('types__form-click-del')
     }
 })
+
+let questionsClick = document.querySelector('.questions__form-click');
+let questionsTick = document.querySelector('.questions__form-tick');
+
+questionsTick.addEventListener('click', ()=> {
+    if(questionsClick.classList.contains('questions__form-click-add')) {
+        questionsClick.classList.add('questions__form-click-del')
+        questionsClick.classList.remove('questions__form-click-add')
+    } else {
+        questionsClick.classList.add('questions__form-click-add')
+        questionsClick.classList.remove('questions__form-click-del')
+    }
+})

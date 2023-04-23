@@ -26,12 +26,9 @@ html,body{
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, input::-moz-placeholder, input::placeholder {
     color: inherit;
 } 
-input::-moz-placeholder {
-    color: inherit;
-}
 
 button{
 	cursor: pointer;
