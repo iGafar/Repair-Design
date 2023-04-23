@@ -595,6 +595,8 @@ body{
 }
 
 .realize {
+    margin-bottom: 110px;
+    position: relative;
 }
 
 .realize__background-image{
@@ -622,9 +624,6 @@ body{
     margin: 0 21px;
 }
 
-.realize__left {
-
-}
 .realize__title {
     font-family: 'Yeseva One';
     font-size: 27px;
@@ -651,12 +650,9 @@ body{
     border-color: #E3B873;
 }
 
-.relize__list-link {
-}
-
 .realize__block {
     display: flex;
-    margin-top: -250px;
+    margin: -250px 0 -41px;
     max-width: max-content;
     gap: 43px;
 }
@@ -671,10 +667,113 @@ body{
     margin-top: 70px;
 }
 
-.realize__block-left>img:first
+.clients {
+    padding-bottom: 355px;
+    background: url(../img/clients_background.png) no-repeat;
+    background-position: bottom;
+}
 
-.realize__block-right {
+.clients__title {
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+    margin: 0 auto;
+}
 
+.clients__logo {
+    content: url(../img/vector/clients__logo.svg);
+    margin: 0 auto 24px;
+}
+
+.clients__subtitle {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+    margin: 0 auto 39px;
+    max-width: 370px;
+}
+
+.clients__block {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 21px;
+}
+
+.clients__card {
+    padding: 24px 32px 0 20px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    max-width: 376px;
+}
+
+.clients__user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 22px;
+    gap: 23px;
+}
+
+.clients__img {
+    border-radius: 50%;
+}
+
+.clients__initials {
+    font-family: 'Yeseva One';
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+    max-width: 200px;
+}
+
+.clients__text {
+    line-height: 23px;
+    color: #959595;
+    margin-bottom: 63px;
+}
+
+.clients__info {
+    display: flex;
+    font-family: 'Yeseva One';
+    font-size: 17px;
+    line-height: 24px;
+    gap: 1px;
+    margin: 0 0 -27px -20px;
+}
+
+.clients__info-meters {
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    padding: 17px 11px 17px 65px;
+    position: relative;
+    width: 135px;
+}
+
+.clients__info-meters::before {
+    content: url(../img/vector/metres.svg);
+    margin-right: 15px;
+    position: absolute;
+    left: 11px;
+    top: 11px;
+}
+
+.clients__info-days {
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    padding: 17px 11px 17px 65px;
+    position: relative;
+    width: 158px;
+}
+
+.clients__info-days::before {
+    content: url(../img/vector/days.svg);
+    margin-right: 15px;
+    position: absolute;
+    left: 11px;
+    top: 11px;
 }
 
 .footer__inner {
