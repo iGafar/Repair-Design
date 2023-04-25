@@ -11,6 +11,20 @@ controlTick.addEventListener('click', ()=> {
     }
 })
 
+let controlMobileClick = document.querySelector('.control__form-click-mobile');
+let controlMobileTick = document.querySelector('.control__form-tick-mobile');
+
+controlMobileTick.addEventListener('click', ()=> {
+    if(controlMobileClick.classList.contains('control__form-click-mobile-add')) {
+        controlMobileClick.classList.add('control__form-click-mobile-del')
+        controlMobileClick.classList.remove('control__form-click-mobile-add')
+    } else {
+        controlMobileClick.classList.add('control__form-click-mobile-add')
+        controlMobileClick.classList.remove('control__form-click-mobile-del')
+    }
+})
+
+
 let typesClick = document.querySelector('.types__form-click');
 let typesTick = document.querySelector('.types__form-tick');
 
