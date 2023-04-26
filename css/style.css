@@ -181,8 +181,6 @@ body {
   margin: 0 21px;
 }
 
-
-
 .projects__title {
   font-family: "Yeseva One";
   font-size: 27px;
@@ -315,6 +313,46 @@ body {
   width: 231px;
 }
 
+.control__check {
+  color: #181818;
+}
+
+.control__check, .types__check, .questions__check {
+  display: block;
+  position: relative;
+  margin-left: 27px;
+}
+
+.control__check-input, .types__check-input, .questions__check-input {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+.control__check-box, .types__check-box, .questions__check-box {
+  display: flex;
+  position: absolute;
+  background: url(../img/vector/disabled.svg) no-repeat;
+  width: 18px;
+  height: 18px;
+  left: -27px;
+  top: -2px;
+  border-radius: 1px;
+}
+
+.control__check-input:checked + .control__check-box,
+.types__check-input:checked + .types__check-box,
+.questions__check-input:checked + .questions__check-box {
+  background: url(../img/vector/check.svg) no-repeat;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: -27px;
+  top: -2px;
+}
+
 .control__form-button {
   width: 200px;
   height: 51px;
@@ -327,57 +365,8 @@ body {
   opacity: 0.9;
 }
 
-.control__form-tick,
-.types__form-tick {
-  color: #181818;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  position: relative;
-}
-
-.control__form-tick-mobile {
+.control__check-mobile {
   display: none;
-}
-
-.control__form-tick::before,
-.types__form-tick::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-color: #e3b873;
-  border-radius: 1px;
-  position: absolute;
-  top: -3px;
-}
-
-.control__form-tick:hover::before,
-.types__form-tick:hover::before {
-  opacity: 0.9;
-}
-
-.control__form-click,
-.types__form-click {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 2px;
-  left: 4px;
-}
-
-.control__form-click-add,
-.types__form-click-add {
-  background: url(../img/vector/control__check.svg) no-repeat;
-}
-
-.control__form-click-del,
-.types__form-click-del {
-  display: none;
-}
-
-.control__form-checkbox,
-.types__form-checkbox {
-  opacity: 0;
 }
 
 .types {
@@ -543,6 +532,19 @@ body {
   margin-bottom: 17px;
 }
 
+.types__check {
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.types__check-box {
+  left: 35px;
+}
+
+.types__check-input:checked + .types__check-box {
+  left: 35px;
+}
+
 .types__form-label {
   display: flex;
   flex-direction: column;
@@ -561,11 +563,6 @@ body {
   outline: 0;
   line-height: 23px;
   color: #fff;
-}
-
-.types__form-tick {
-  color: #fff;
-  margin-bottom: 39px;
 }
 
 .types__form-btn {
@@ -864,48 +861,16 @@ body {
   color: #fff;
 }
 
-.questions__form-tick {
-  display: flex;
-  justify-content: center;
-  gap: 9px;
-  position: relative;
-  margin: 0 auto 50px;
-  width: 292px;
+.questions__check {
+  margin-bottom: 50px;
 }
 
-.questions__form-tick::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-color: #e3b873;
-  border-radius: 1px;
-  position: absolute;
-  top: -3px;
-  left: 7px;
+.questions__check-box {
+  left: 90px;
 }
 
-.questions__form-tick:hover::before {
-  opacity: 0.9;
-}
-
-.questions__form-click {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 2px;
-  left: 11px;
-}
-
-.questions__form-click-add {
-  background: url(../img/vector/control__check.svg) no-repeat;
-}
-
-.questions__form-click-del {
-  display: none;
-}
-
-.questions__form-checkbox {
-  opacity: 0;
+.questions__check-input:checked + .questions__check-box {
+  left: 90px;
 }
 
 .questions__form-btn {
@@ -1137,73 +1102,43 @@ body {
     border-bottom: 1px solid #fff;
     width: 340px;
   }
-  .control__form-button {
-  }
 
-  .control__form-tick {
+  .control__check {
     display: none;
   }
 
-  .control__form-tick::before {
-    display: none;
-  }
-
-  .control__form-tick-mobile {
-    display: flex;
+  .control__check-mobile {
+    display: block;
     position: relative;
-    gap: 9px;
+    margin-left: 27px;
   }
 
-  .control__form-tick-mobile {
+  .control__check-mobile-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
   }
-  .control__form-click-mobile {
+
+  .control__check-mobile-box {
+    position: absolute;
+    background: url(../img/vector/disabled.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -27px;
+    top: -4px;
+    border-radius: 1px;
   }
-  .control__form-checkbox-mobile {
+
+  .control__check-mobile-input:checked + .control__check-mobile-box {
+    background: url(../img/vector/check.svg) no-repeat;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: -27px;
+    top: -4px;
   }
-
-.types__form-tick {
-  color: #181818;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  position: relative;
-}
-
-
-
-.control__form-tick-mobile::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-color: #e3b873;
-  border-radius: 1px;
-  position: absolute;
-  top: -3px;
-}
-
-.control__form-tick-mobile:hover::before {
-  opacity: 0.9;
-}
-
-.control__form-click-mobile {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 2px;
-  left: 4px;
-}
-
-.control__form-click-mobile-add {
-  background: url(../img/vector/control__check.svg) no-repeat;
-}
-
-.control__form-click-mobile-del {
-  display: none;
-}
-
-.control__form-checkbox-mobile {
-  opacity: 0;
-}
 
   .types {
   }
@@ -1241,12 +1176,7 @@ body {
   }
   .types__form-label {
   }
-  .types__form-tick {
-  }
-  .types__form-click {
-  }
-  .types__form-checkbox {
-  }
+
   .types__form-btn {
   }
   .types__bottom-end {
@@ -1320,12 +1250,7 @@ body {
   }
   .questions__form-label {
   }
-  .questions__form-tick {
-  }
-  .questions__form-click {
-  }
-  .questions__form-checkbox {
-  }
+
   .questions__form-btn {
   }
   .questions__title {

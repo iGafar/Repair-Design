@@ -175,42 +175,34 @@
             </p>
             <form action="#" class="control__form">
               <div class="control__form-block">
-                <label for="#" class="control__form-label">
+                <label class="control__form-label">
                   Name
                   <input type="text" placeholder="What is your name:" />
                 </label>
 
-                <label for="#" class="control__form-label">
+                <label class="control__form-label">
                   Phone
                   <input type="tel" placeholder="Your phone number:" />
                 </label>
 
-                <div class="control__form-tick-mobile">
-                  <div class="control__form-click-mobile"></div>
+                <label class="control__check-mobile">
                   <input
-                    class="control__form-checkbox-mobile"
-                    type="checkbox"
-                    name="Agree"
-                    id="#"
-                  />
+                    class="control__check-mobile-input" type="checkbox"/>
+                  <span class="control__check-mobile-box"></span>
                   I agree to the processing of personal data
-                </div>
+                </label>
 
                 <button class="control__form-button" type="submit">
                   Submit
                 </button>
               </div>
 
-              <div class="control__form-tick">
-                <div class="control__form-click"></div>
+              <label class="control__check">
                 <input
-                  class="control__form-checkbox"
-                  type="checkbox"
-                  name="Agree"
-                  id="#"
-                />
+                  class="control__check-input" type="checkbox"/>
+                <span class="control__check-box"></span>
                 I agree to the processing of personal data
-              </div>
+              </label>
             </form>
           </div>
         </section>
@@ -313,16 +305,12 @@
                     </label>
                   </div>
 
-                  <div class="types__form-tick">
-                    <div class="types__form-click"></div>
+                  <label class="types__check">
                     <input
-                      class="types__form-checkbox"
-                      type="checkbox"
-                      name="Agree"
-                      id="#"
-                    />
+                      class="types__check-input" type="checkbox"/>
+                    <span class="types__check-box"></span>
                     I agree to the processing of personal data
-                  </div>
+                  </label>
 
                   <button class="types__form-btn" type="submit">
                     Call the measurer
@@ -530,16 +518,12 @@
                 <input type="text" placeholder="I want to know:" />
               </label>
 
-              <div class="questions__form-tick">
-                <div class="questions__form-click"></div>
+              <label class="questions__check">
                 <input
-                  class="questions__form-checkbox"
-                  type="checkbox"
-                  name="Agree"
-                  id="#"
-                />
+                  class="questions__check-input" type="checkbox"/>
+                <span class="questions__check-box"></span>
                 I agree to the processing of personal data
-              </div>
+              </label>
 
               <button class="questions__form-btn" type="submit">Submit</button>
             </form>
@@ -615,6 +599,5 @@
       </footer>
     </div>
 
-    <script src="js/main.js"></script>
   </body>
 </html>
