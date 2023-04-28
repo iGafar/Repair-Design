@@ -1162,23 +1162,6 @@ body {
     display: none;
   }
 
-  .types__background {
-  }
-  .types__bottom-block {
-  }
-  .types__bottom-list {
-  }
-  .types__bottom-item {
-  }
-  .types__form {
-  }
-  .types__form-title {
-  }
-  .types__form-block {
-  }
-  .types__form-label {
-  }
-
   .realize__background-color {
     display: none;
   }
@@ -1191,55 +1174,26 @@ body {
     flex-direction: column;
     padding: 0;
   }
-  .realize__left {
-  }
+  
   .realize__title {
     font-size: 22px;
     line-height: 138.6%;
     text-align: center;
     margin: 0 auto 24px;
   }
+
   .realize__list {
     display: none;
   }
-  .realize__list-item {
-  }
-  .relize__list-link {
-  }
+
   .realize__block {
     display: none;
   }
-  .realize__block-left {
-  }
-  .realize__block-right {
-  }
+
   .clients {
     display: none;
   }
-  .clients__title {
-  }
-  .clients__logo {
-  }
-  .clients__subtitle {
-  }
-  .clients__block {
-  }
-  .clients__card {
-  }
-  .clients__user {
-  }
-  .clients__img {
-  }
-  .clients__initials {
-  }
-  .clients__text {
-  }
-  .clients__info {
-  }
-  .clients__info-meters {
-  }
-  .clients__info-days {
-  }
+
   .questions {
     background-color: #181818;
     padding-top: 173px;
@@ -1292,10 +1246,7 @@ body {
   .questions__links {
     order: 1;
   }
-  .questions__links-mail {
-  }
-  .questions__links-inst {
-  }
+
   .questions__cart {
     width: 100%;
     height: 30vh;
@@ -1303,7 +1254,5 @@ body {
   }
   .footer {
     display: none;
-  }
-  .footer__inner {
   }
 }
