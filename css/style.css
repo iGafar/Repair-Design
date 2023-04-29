@@ -424,8 +424,9 @@ body {
   line-height: 27px;
   color: #959595;
   background-color: #ffffff;
-  margin: -2px 0 23px;
+  margin: -2px 0 0;
   padding-left: 50px;
+  padding-bottom: 36px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
@@ -443,6 +444,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding: 17px 0;
+  margin-top: -27px;
   cursor: pointer;
 }
 
@@ -990,9 +992,11 @@ body {
     top: 103px;
     left: 14px;
   }
+
   .projects__mobile-img {
     margin: 0 auto;
   }
+
   .projects__mobile-right {
     content: url(../img/vector/projects_mobile_right.svg);
     position: absolute;
@@ -1003,6 +1007,11 @@ body {
     border-radius: 50%;
     top: 103px;
     right: 14px;
+  }
+
+  .projects__mobile-left:hover, .projects__mobile-right:hover{
+    opacity: 0.9;
+    cursor: pointer;
   }
 
   .projects__info {
