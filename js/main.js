@@ -27,17 +27,9 @@ const areaText = document.querySelector(".projects__info-area");
 const timeText = document.querySelector(".projects__info-time");
 const costText = document.querySelector(".projects__info-cost");
 const projectsImg = document.querySelector(".projects__img");
+const projectsMobileImg = document.querySelector(".projects__mobile-img");
 const projectsCircle = document.querySelectorAll(".projects__arrows-circle");
 const projectsCity = document.querySelectorAll(".projects__list-item");
-
-let currentIndex = 0;
-let maxIndex = entities.length;
-
-for (let i = 0; i <= maxIndex; i++){
-  projectsCity[i].addEventListener("click", () => {
-    console.log('hi');
-  })
-}
 
 const setEntity = (index) => {
   cityText.innerText = entities[index].cityText;
@@ -45,44 +37,57 @@ const setEntity = (index) => {
   timeText.innerText = entities[index].timeText;
   costText.innerText = entities[index].costText;
   projectsImg.style.content = `url(${entities[index].img})`;
+  projectsMobileImg.style.content = `url(${entities[index].img})`;
+  for (let i = 0; i < maxIndex; i++) {
+    projectsCircle[i].classList.remove("projects__arrows-active");
+    projectsCity[i].classList.remove("projects__list-active");
+  }
   projectsCircle[index].classList.add("projects__arrows-active");
   projectsCity[index].classList.add("projects__list-active");
 };
 
+let currentIndex = 0;
+let maxIndex = entities.length;
+
+function changeImg(e) {
+  for (let i = 0; i < maxIndex; i++) {
+    e[i].addEventListener("click", () => {
+      currentIndex = i;
+      setEntity(i);
+    });
+  }
+}
+
+changeImg(projectsCity);
+changeImg(projectsCircle);
+
 const prev = document.querySelector(".projects__arrows-left");
 const next = document.querySelector(".projects__arrows-right");
+const prevMobile = document.querySelector(".projects__mobile-left");
+const nextMobile = document.querySelector(".projects__mobile-right");
 
-prev.addEventListener("click", () => {
-  if (currentIndex === 0) {
-    projectsCircle[0].classList.remove("projects__arrows-active");
-    projectsCity[0].classList.remove("projects__list-active");
-    currentIndex = maxIndex;
-  }
-  setEntity(currentIndex - 1);
-  currentIndex -= 1;
-  if (projectsCircle[currentIndex + 1]) {
-    projectsCircle[currentIndex + 1].classList.remove(
-      "projects__arrows-active"
-    );
-    projectsCity[currentIndex + 1].classList.remove("projects__list-active");
-  }
-});
+function prevImg(button) {
+  button.addEventListener("click", () => {
+    if (currentIndex === 0) {
+      currentIndex = maxIndex;
+    }
+    currentIndex -= 1;
+    setEntity(currentIndex);
+  });
+}
 
-next.addEventListener("click", () => {
-  if (currentIndex === maxIndex - 1) {
-    projectsCircle[currentIndex].classList.remove("projects__arrows-active");
-    projectsCity[currentIndex].classList.remove("projects__list-active");
-    currentIndex = -1;
-    
-  }
-  setEntity(currentIndex + 1);
-  currentIndex += 1;
-  if (projectsCircle[currentIndex - 1]) {
-    projectsCircle[currentIndex - 1].classList.remove(
-      "projects__arrows-active"
-    );
-    projectsCity[currentIndex - 1].classList.remove("projects__list-active");
-  }
-});
+prevImg(prev);
+prevImg(prevMobile);
 
+function nextImg(button) {
+  button.addEventListener("click", () => {
+    if (currentIndex === maxIndex - 1) {
+      currentIndex = -1;
+    }
+    currentIndex += 1;
+    setEntity(currentIndex);
+  });
+}
 
+nextImg(next);
+nextImg(nextMobile);
