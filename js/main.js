@@ -44,7 +44,7 @@ const setEntity = (index) => {
   costText.innerText = entities[index].costText;
   projectsImg.src = `${entities[index].img}`;
   projectsMobileImg.src = `${entities[index].img}`;
-  for (let i = 0; i < maxIndex; i++) {
+  for (let i = 0; i < maxProjectsIndex; i++) {
     projectsCircle[i].classList.remove("projects__arrows-active");
     projectsCity[i].classList.remove("projects__list-active");
   }
