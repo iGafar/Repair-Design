@@ -22,6 +22,12 @@ const entities = [
   },
 ];
 
+const entitiesRealize = [
+  "./img/realize_background.jpg",
+  "./img/realize3.jpg",
+  "./img/realize2.jpg"
+];
+
 const cityText = document.querySelector(".projects__info-city");
 const areaText = document.querySelector(".projects__info-area");
 const timeText = document.querySelector(".projects__info-time");
@@ -36,8 +42,8 @@ const setEntity = (index) => {
   areaText.innerText = entities[index].areaText;
   timeText.innerText = entities[index].timeText;
   costText.innerText = entities[index].costText;
-  projectsImg.style.content = `url(${entities[index].img})`;
-  projectsMobileImg.style.content = `url(${entities[index].img})`;
+  projectsImg.src = `${entities[index].img}`;
+  projectsMobileImg.src = `${entities[index].img}`;
   for (let i = 0; i < maxIndex; i++) {
     projectsCircle[i].classList.remove("projects__arrows-active");
     projectsCity[i].classList.remove("projects__list-active");
@@ -46,11 +52,16 @@ const setEntity = (index) => {
   projectsCity[index].classList.add("projects__list-active");
 };
 
+const setEntityRealize = (index) => {
+  realizeMobileImg.src = `${entitiesRealize[index]}`;
+};
+
 let currentIndex = 0;
-let maxIndex = entities.length;
+let maxProjectsIndex = entities.length;
+let maxRealizeIndex = entitiesRealize.length;
 
 function changeImg(e) {
-  for (let i = 0; i < maxIndex; i++) {
+  for (let i = 0; i < maxProjectsIndex; i++) {
     e[i].addEventListener("click", () => {
       currentIndex = i;
       setEntity(i);
@@ -66,31 +77,39 @@ const next = document.querySelector(".projects__arrows-right");
 const prevMobile = document.querySelector(".projects__mobile-left");
 const nextMobile = document.querySelector(".projects__mobile-right");
 
-function prevImg(button) {
+const realizeMobileImg = document.querySelector(".realize__mobile-img");
+const prevRealizeMobile = document.querySelector(".realize__mobile-left");
+const nextRealizeMobile = document.querySelector(".realize__mobile-right");
+
+realizeMobileImg.style.height = `${realizeMobileImg.width * 0.71}px`
+
+function prevImg(button, fn, maxIndex) {
   button.addEventListener("click", () => {
     if (currentIndex === 0) {
       currentIndex = maxIndex;
     }
     currentIndex -= 1;
-    setEntity(currentIndex);
+    fn(currentIndex);
   });
 }
 
-prevImg(prev);
-prevImg(prevMobile);
+prevImg(prev, setEntity, maxProjectsIndex);
+prevImg(prevMobile, setEntity, maxProjectsIndex);
+prevImg(prevRealizeMobile, setEntityRealize, maxRealizeIndex)
 
-function nextImg(button) {
+function nextImg(button, fn, maxIndex) {
   button.addEventListener("click", () => {
     if (currentIndex === maxIndex - 1) {
       currentIndex = -1;
     }
     currentIndex += 1;
-    setEntity(currentIndex);
+    fn(currentIndex);
   });
 }
 
-nextImg(next);
-nextImg(nextMobile);
+nextImg(next, setEntity, maxProjectsIndex);
+nextImg(nextMobile, setEntity, maxProjectsIndex);
+nextImg(nextRealizeMobile, setEntityRealize, maxRealizeIndex)
 
 const burger = document.querySelector(".header__lines");
 const firstLine = document.querySelectorAll(".header__lines-item")[0];
@@ -112,16 +131,7 @@ burger.addEventListener("click", () => {
     secondLine.style.transform = "translate(100px)";
     secondLine.style.opacity = "0";
     thirdLine.style.transform = "rotate(-45deg) translate(5px, -7px)";
-    menu.style.top = '0';
+    menu.style.top = "0";
     contacts.style.left = "10px";
   }
 });
-
-const realizeImg = {
-  firstImg: './img/realize_background.jpg',
-  secondImg: './img/realize3.jpg',
-}
-
-const realizeMobileImg = document.querySelector('.realize__mobile-img');
-
-
