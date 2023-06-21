@@ -116,3 +116,12 @@ burger.addEventListener("click", () => {
     contacts.style.left = "10px";
   }
 });
+
+const realizeImg = {
+  firstImg: './img/realize_background.jpg',
+  secondImg: './img/realize3.jpg',
+}
+
+const realizeMobileImg = document.querySelector('.realize__mobile-img');
+
+

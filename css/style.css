@@ -577,8 +577,9 @@ body {
 }
 
 .types__check {
-  text-align: center;
   margin-bottom: 39px;
+  margin-left: 0;
+  float: left;
 }
 
 .types__form-label {
@@ -703,6 +704,10 @@ body {
   margin: -250px 0 -41px;
   max-width: max-content;
   gap: 43px;
+}
+
+.realize__mobile {
+  display: none;
 }
 
 .realize__block-right,
@@ -1164,9 +1169,6 @@ body {
     top: -4px;
   }
 
-  .types {
-    margin-bottom: 75px;
-  }
   .types__title {
     font-size: 22px;
     line-height: 138.6%;
@@ -1179,8 +1181,8 @@ body {
   .types__top {
     flex-wrap: wrap;
     gap: 79px;
-    margin: 0 auto;
-    width: 340px;
+    margin: 0 auto 80px;
+    justify-content: center;
   }
 
   .types__top-block {
@@ -1209,40 +1211,17 @@ body {
     margin-top: -20px;
   }
 
-  .types__bottom {
-    display: none;
-  }
-
-  .realize__background-color {
-    display: none;
-  }
-
-  .realize__background-image {
-    display: none;
-  }
-
-  .realize__inner {
-    flex-direction: column;
-    padding: 0;
-  }
-
   .realize__title {
     font-size: 22px;
     line-height: 138.6%;
-    text-align: center;
     margin: 0 auto 24px;
   }
 
-  .realize__list {
-    display: none;
-  }
+  .clients__block {
+    flex-wrap: wrap;
+    gap: 40px;
 
-  .realize__block {
-    display: none;
-  }
-
-  .clients {
-    display: none;
+    justify-content: center;
   }
 
   .questions {
@@ -1315,6 +1294,43 @@ body {
   .contacts {
     gap: 15px;
   }
+
+  .types {
+    margin-bottom: 222px;
+  }
+
+  .types__bottom-list {
+    margin-left: 0;
+  }
+
+  .realize__background-color,
+  .realize__background-image,
+  .realize__list,
+  .realize__block {
+    display: none;
+  }
+
+  .realize__inner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .realize__mobile {
+    display: block;
+    width: 100vw;
+  }
+
+  .realize__mobile-img {
+    width: 90.7%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .types__bottom-item p {
+    max-width: 260px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1380,7 +1396,7 @@ body {
   .title {
     width: 100%;
   }
-  
+
   .control__video {
     height: 207px;
   }
@@ -1391,5 +1407,33 @@ body {
 
   .projects__mobile-img {
     width: 100%;
+  }
+
+  .types__bottom-block {
+    justify-content: center;
+  }
+
+  .types__bottom-list {
+    display: none;
+  }
+
+  .types__check {
+    float: none;
+  }
+
+  .types__form-btn {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .types__bottom-end {
+    display: flex;
+    float: none;
+    justify-content: center;
+  }
+
+  .types__bottom-text {
+    margin-right: 0;
   }
 }
