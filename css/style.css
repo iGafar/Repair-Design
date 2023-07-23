@@ -1,8 +1,13 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .wrapper {
